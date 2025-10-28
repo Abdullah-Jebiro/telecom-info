@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("proxy-aspnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25ee7ad3abe28f3b8a67f0d071cbd6fb5cfaca44")]
 [assembly: System.Reflection.AssemblyProductAttribute("proxy-aspnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("proxy-aspnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

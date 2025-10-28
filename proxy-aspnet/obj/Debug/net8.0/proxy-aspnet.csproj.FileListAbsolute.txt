@@ -23,3 +23,4 @@ c:\Programming\telecom-info\proxy-aspnet\obj\Debug\net8.0\refint\proxy-aspnet.dl
 c:\Programming\telecom-info\proxy-aspnet\obj\Debug\net8.0\proxy-aspnet.pdb
 c:\Programming\telecom-info\proxy-aspnet\obj\Debug\net8.0\proxy-aspnet.genruntimeconfig.cache
 c:\Programming\telecom-info\proxy-aspnet\obj\Debug\net8.0\ref\proxy-aspnet.dll
+c:\Programming\telecom-info\proxy-aspnet\obj\Debug\net8.0\proxy-aspnet.sourcelink.json

@@ -15,6 +15,7 @@
   <main>
     <section class="card" aria-labelledby="request-card-title">
       <h2 id="request-card-title">طلب البيانات</h2>
+      
       <form id="fetchForm">
         <div class="field">
           <label for="username">اسم المستخدم (البريد):</label>
@@ -26,7 +27,6 @@
         </div>
         <div class="actions">
           <button type="submit">جلب وتخزين الآن</button>
-          <button type="button" id="testSample" class="secondary">عرض مثال بدون اتصال</button>
         </div>
       </form>
 
@@ -37,6 +37,8 @@
           <li>لا يتم تخزين اسم المستخدم أو كلمة المرور في LocalStorage، فقط نتيجة الاستجابة مع وقت الجلب.</li>
         </ul>
       </details>
+
+
     </section>
 
     <section class="card" aria-labelledby="latest-title">
@@ -63,6 +65,7 @@
       </div>
       <div id="historyList" class="history"></div>
     </section>
+
   </main>
 
   <footer>
