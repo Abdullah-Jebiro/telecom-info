@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telecom Info Logger</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>تخزين بيانات TelecomSY في المتصفح</h1>
+    <p class="subtitle">يجلب البيانات من gso.php ويخزنها في LocalStorage في كل مرة.</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="request-card-title">
+      <h2 id="request-card-title">طلب البيانات</h2>
+      <form id="fetchForm">
+        <div class="field">
+          <label for="username">اسم المستخدم (البريد):</label>
+          <input id="username" name="username" type="email" placeholder="مثال: 261496@idleb.com" required />
+        </div>
+        <div class="field">
+          <label for="password">كلمة المرور:</label>
+          <input id="password" name="password" type="password" required />
+        </div>
+        <div class="actions">
+          <button type="submit">جلب وتخزين الآن</button>
+          <button type="button" id="testSample" class="secondary">عرض مثال بدون اتصال</button>
+        </div>
+      </form>
+
+      <details class="hint">
+        <summary>ملاحظات مهمة</summary>
+        <ul>
+          <li>قد يمنع المتصفح الطلب المباشر بسبب CORS. إذا ظهر خطأ CORS، استخدم قسم "ملاحظات التشغيل" في README لتشغيل عبر Proxy محلي.</li>
+          <li>لا يتم تخزين اسم المستخدم أو كلمة المرور في LocalStorage، فقط نتيجة الاستجابة مع وقت الجلب.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="latest-title">
+      <h2 id="latest-title">آخر نتيجة</h2>
+      <div id="latestResult" class="result empty">لا توجد بيانات بعد.</div>
+
+      <div class="auto-refresh">
+        <label>
+          تحديث تلقائي كل
+          <input id="intervalMinutes" type="number" min="1" max="1440" value="15" />
+          دقيقة
+        </label>
+        <button id="startAuto" type="button">تشغيل التحديث التلقائي</button>
+        <button id="stopAuto" type="button" disabled>إيقاف</button>
+        <span id="nextRun" class="muted"></span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="history-title">
+      <h2 id="history-title">السجل المخزن (LocalStorage)</h2>
+      <div class="actions">
+        <button id="exportBtn" type="button" class="secondary">تصدير JSON</button>
+        <button id="clearBtn" type="button" class="danger">مسح السجل</button>
+      </div>
+      <div id="historyList" class="history"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>محلي 100% — لا يتم إرسال بياناتك لأي مكان آخر غير TelecomSY.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
