@@ -76,9 +76,14 @@ Small static HTML+JS app to GET the gso.php endpoint and store each response in 
 
 1) تأكد من تثبيت .NET 8 SDK.
 
-2) من PowerShell (pwsh) داخل المجلد `proxy-aspnet` شغّل:
+2) من PowerShell (pwsh) يمكنك تشغيل أحد الخيارين:
 
 ```powershell
+# الخيار A: من الجذر (هذا المجلد)
+./run-proxy.ps1
+
+# الخيار B: من داخل مجلد المشروع
+cd proxy-aspnet
 dotnet restore
 dotnet run
 ```
